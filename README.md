@@ -1,3 +1,9 @@
+INSTALASI project
+1. download project,bisa melalui git ("git clone https://github.com/E-Prasetyo/mockuptest.git") atau mendownload file dari "https://github.com/E-Prasetyo/mockuptest.git" dari .ZIP (harap di ektrak terlebih dlu)
+2. Jika sudah mendonwload buka project menggukan VS Code atau IDE serupa
+3. Jika sudah buka terminal yang ada pada IDE, jika sudah ketikan "npm install" (untuk mendowload semua library yang ada)
+4. Jika sudah dan berhasil lanjutkan dengan "npm start" untuk memulai atau menjalankan project
+
 LIBRARY yang di gunakan
 - react-router-dom (cara install bisa dilihat https://reactrouter.com/en/v6.3.0/getting-started/installation), untuk perutean halaman
 - axios (cara install bisa dilihat https://axios-http.com/docs/intro),  untuk membantu mengambil data dari API
@@ -14,6 +20,7 @@ VERSION
 Penjelasan Kode
 
 - APP.js : Sebagai tempat perutean atau route page
+- .env : Sebagai tempat penyimpanan data privasi, sebenarnya env ini tidak akan di upload ke repo
 
 - Folder Auth 
   * Auth Context dan Provider : sebagai setup awal untuk mmebuat react hook/context yang digunakan sebagai penyimpanan data token, authcontext untuk mendefinisikan apa saja yang disempan pada context/hook kemudian authprovider sebagai media penyedia data dati konteks/hook
@@ -28,6 +35,25 @@ Penjelasan Kode
 
 - Folder Service : berisi semua service untuk mengambil data dari API
 
+Penggunaaan Aplikasi
+1. Pengguna harus Login sebelum mengakses halaman Home, jika belum mempunyai akun bisa Register terlebih dahulu
+2. Setelah Login, pengguna akan langsung di arahkan ke halaman Home
+3. Ada beberapa fitur yang bisa digunakan
+   * Create New Product : pengguna dapat menekan tombol "Create New", kemudian akan muncul modal silakan isi sesuai kebutuhan lalu tekan "Create". *note: untuk image silahkan gunakan model url (contoh: https://pbs.twimg.com/profile_images/1478893871199186945/1mA6tezL_400x400.jpg)
+   * Edit Product : pengguna dapat menekan tombol "Edit" bericon pena berwarna biru, kemudian akan muncul modal silakan isi sesuai kebutuhan lalu tekan "Update". *note: untuk image silahkan gunakan model url (contoh: https://pbs.twimg.com/profile_images/1478893871199186945/1mA6tezL_400x400.jpg)
+   * Delete Product : pengguna dapat menekan tombol "Delete" bericon tempat sampah berwarna mearh, kemudian akan muncul modal silakan isi sesuai kebutuhan lalu tekan "yes, delete it". 
+4. Jika sudah dan ingin keluar dari aplikasi bisa dengan menekan tombol Logout.
+
+
+Pedapat tentang servie API 
+1. response response http kode kurang tepat 
+    * Endpoint Login : pesan http response untuk gagal dan berhasil masih sama, seharusnya dibuat berbeda
+    * Endpoint Register : pesan http response untuk gagal dan berhasil masih sama, seharusnya dibuat berbeda
+    * Endpoint Creat new Product: pesan http response untuk gagal dan berhasil masih sama, seharusnya dibuat berbeda, waktu keadaan salah satu data kosong 
+2. Beberapa Endpoint masih terkendata CORS
+    * Delete product
+    * Update product
+3. Kurangnya dokumentasi pendukung seperti contoh response, jika gagal atau berhasil sehingga FE tidak perlu mencoba semua kondisi. Dengan begitu FE tau response dan penanganannya
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

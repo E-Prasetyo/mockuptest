@@ -15,10 +15,11 @@ const Login = () => {
     const [message, setMessage] = useState('');
 
     useEffect(() => {
-      
-    
-      
-    }, [])
+        const sessionToken = sessionStorage.getItem('token');
+        if(sessionToken){
+          navigate("/")
+        }
+    }, [navigate])
     
 
     const onSubmit = (evt) =>{ 

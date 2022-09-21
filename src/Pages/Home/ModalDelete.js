@@ -72,7 +72,12 @@ const ModalDelete = ({toggle, item}) => {
                 Yes, delete it
             </button>
         </div>
-        
+        {isLoading &&
+            <div className="flex justify-center items-center">
+                <div className="w-10 h-10 border-b-2 border-gray-900 rounded-full animate-spin"></div>
+                    <span className='px-2'>Loading...</span>
+            </div>
+        }
     </Modal>
             
     </>

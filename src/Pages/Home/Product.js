@@ -22,7 +22,7 @@ const Product = ({data}) => {
     }
 
     const handleEdit = (data) =>{
-        console.log(data.id)
+        // console.log(data.id)
         setIsEdit(true)
         setSelectedItem(data);
     }

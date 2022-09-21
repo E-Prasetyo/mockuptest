@@ -1,9 +1,10 @@
-import React, { useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useRef, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { Loading, Notification } from '../../Components'
 import Auth from '../../Services/AuthService'
 
 const Register = () => {
+    const navigate = useNavigate();
     const name = useRef()
     const email = useRef()
     const password = useRef()
@@ -11,6 +12,13 @@ const Register = () => {
     const [isModal, setIsModal] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [message, setMessage] = useState('');
+
+    useEffect(() => {
+        const sessionToken = sessionStorage.getItem('token');
+        if(sessionToken){
+          navigate("/")
+        }
+    }, [navigate])
 
     const onSubmit = (evt) =>{ 
         evt.preventDefault()

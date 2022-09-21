@@ -1,3 +1,33 @@
+LIBRARY yang di gunakan
+- react-router-dom (cara install bisa dilihat https://reactrouter.com/en/v6.3.0/getting-started/installation), untuk perutean halaman
+- axios (cara install bisa dilihat https://axios-http.com/docs/intro),  untuk membantu mengambil data dari API
+- tailwind (cara install bisa dilihat https://tailwindcss.com/docs/installation/using-postcss), untuk framework CSS sebagai ganti css manual
+- heroicons (cara install bisa dilihat https://www.npmjs.com/package/heroicons), sebagai library icons
+
+VERSION
+- "axios": "^0.27.2"
+- "react": "^18.2.0" 
+-"react-dom": "^18.2.0"
+- "react-router-dom": "^6.4.0",
+- "@heroicons/react": "^2.0.11"
+
+Penjelasan Kode
+
+- APP.js : Sebagai tempat perutean atau route page
+
+- Folder Auth 
+  * Auth Context dan Provider : sebagai setup awal untuk mmebuat react hook/context yang digunakan sebagai penyimpanan data token, authcontext untuk mendefinisikan apa saja yang disempan pada context/hook kemudian authprovider sebagai media penyedia data dati konteks/hook
+  * AuthRoute : sebagai perutean terproteksi atau peoteksi rute, jika user belum login tidak akan bisa mengakses halama home
+  
+- Folder Components
+  * ModalUI : komponen yang digunakan sebagai wrapper modal, jadi isi dari modal bisa di custom, conton(<Modal> isi Costum </Modal>)
+  * Loading : komponen yang digunakan sebagai tampilan saat loading data
+  * Notification: komponen yang digunakan sebagai tampilan untuk membuat notifikasi pesan
+
+- Folder Pages : berisi semua halaman page yang ada di dalam web
+
+- Folder Service : berisi semua service untuk mengambil data dari API
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
